@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-export const userDetailSchema = new mongoose.Schema({
+const userDetailSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -28,4 +28,4 @@ export const userDetailSchema = new mongoose.Schema({
 //     return await bcrypt.compare(password, this.password)
 // }
 
-export const userData = mongoose.model("UserInfo", userDetailSchema);
+export default mongoose.model("UserInfo", userDetailSchema);

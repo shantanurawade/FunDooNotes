@@ -2,7 +2,8 @@ import dotenv from "dotenv";
 import { connectDb } from "./db/index.js";
 import { app } from "./app.js";
 import { json } from 'express';
-import router from "./routes/user.routers.js";
+import routers from "./routes/index.js";
+import { API_VERSION } from "./constants.js";
 
 dotenv.config({ path: './env' });
 
@@ -17,4 +18,4 @@ connectDb().
 
 
 app.use(json());
-app.use(router);
+app.use(`/api/${API_VERSION}`, routers());
