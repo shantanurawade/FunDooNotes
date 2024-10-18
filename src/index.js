@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { connectDb } from "./db/index.js";
-import { app } from "./app.js";
+import { app } from "./App.js";
 import { json } from 'express';
 import routers from "./routes/index.js";
 import { API_VERSION } from "./constants.js";

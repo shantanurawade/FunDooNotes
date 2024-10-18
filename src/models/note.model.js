@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 
 const noteScheme = new mongoose.Schema({
     userId: {
-        type: String
+        type: String,
+        default: "670d5fbef338cfede1352680"
     },
     noteTitle: {
         type: String
@@ -12,13 +13,16 @@ const noteScheme = new mongoose.Schema({
         type: String
     },
     isPinned: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     isRecycled: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     isArchive: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 }, {
     timestamps: true
